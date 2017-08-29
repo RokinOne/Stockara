@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Stockara</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="stockara.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div id="app">
+	<div id="app-control">
+		<span id="app-control-title">Stock Tracking</span>
+		Upload stock tracking file
+		<input type="file" name="Upload CSV" id="upload-file" accept=".csv">
+	</div>
+	<div id="supplier"></div>
+	<div id="main">
+		<div id="value">STOCK VALUE IN K EUR</div>
+		<div id="avgValue"></div>
+
+		<svg id="graph" class="chart" height="500" xmlns="http://www.w3.org/2000/svg">
+			<line id="vertLine" y1="0" y2="100%"></line>
+			<line id="graphx1" y1="0" x1="0" y2="0"></line>
+			<line id="graphx2" x1="0"></line>
+			<line id="graphx3" x1="0"></line>
+			<line id="graphx4" x1="0"></line>
+			<line id="graphy1" y1="0" x1="0" x2="0"></line>
+			<text id="grapht1" x="-50" y="2%"></text>
+			<text id="grapht2" x="-50" y="35%"></text>
+			<text id="grapht3" x="-50" y="68%"></text>
+			<text id="grapht4" x="-50" y="100%"></text>
+			<text id="grapht5" x="18%" y="105%"></text>
+			<text id="grapht6" x="38%" y="105%"></text>
+			<text id="grapht7" x="58%" y="105%"></text>
+			<text id="grapht8" x="78%" y="105%"></text>
+			<text id="tooltip"></text>
+			<polyline id="graphLine" fill="none" stroke="#0074d9" stroke-width="2" points=""/>
+		</svg>
+
+	</div>
+</div>
+
+<script src="stockara.js"></script>
+</html>
